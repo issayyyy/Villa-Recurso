@@ -1,7 +1,7 @@
 /**
  * Villa Recurso Resort — Single-Page Website
  * Theme  : Sophisticated Light (off-white base, warm orange/yellow accents)
- * Paths  : All assets prefixed with public/
+ * Paths  : All assets prefixed with /
  * CTAs   : Book Now → https://m.me/VillaRecurso
  * Layout : No outer margin / parallel-line artefacts
  */
@@ -122,7 +122,7 @@ function Nav() {
       }}>
         <a href="#hero" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
           <img
-            src="public/logo.png"
+            src="/logo.png"
             alt="Villa Recurso"
             style={{
               height: 40, width: "auto",
@@ -223,7 +223,7 @@ function Hero() {
     }}>
       <div style={{
         position: "absolute", inset: 0,
-        backgroundImage: "url('public/resort-5.jpg')",
+        backgroundImage: "url('/resort-5.jpg')",
         backgroundSize: "cover", backgroundPosition: "center 38%",
         transform: "scale(1.04)", transition: "transform 14s ease-out",
       }} />
@@ -237,7 +237,7 @@ function Hero() {
       }}>
         <div style={{ ...anim(0), marginBottom: 28 }}>
           <img
-            src="public/logo.png" alt="Villa Recurso"
+            src="/logo.png" alt="Villa Recurso"
             style={{ height: 210, width: "auto", filter: "drop-shadow(0 4px 24px rgba(0,0,0,0.65))" }}
           />
         </div>
@@ -357,7 +357,7 @@ function SectionHeading({ eyebrow, title, subtitle, centered = true }) {
 const rooms = [
   {
     id: "arch", name: "Arch Cabin", sub: "Kawa Bliss Bure",
-    badge: "🔥 Best Seller", price: "3,000", image: "public/cabin-hero.jpg", flip: false,
+    badge: "🔥 Best Seller", price: "3,000", image: "/cabin-hero.jpg", flip: false,
     desc: "A charming arched sanctuary nestled among bamboo groves. Intimate, unique, and impossibly cozy — this is highland living at its most authentic.",
     inclusions: [
       { icon: <Bath size={14} />,     text: "Free Kawa Hot Bath"    },
@@ -367,7 +367,7 @@ const rooms = [
   },
   {
     id: "octatel", name: "Octatel Room", sub: "Mountain Cozy Bure",
-    badge: null, price: "2,000", image: "public/octatel.jpg", flip: true,
+    badge: null, price: "2,000", image: "/octatel.jpg", flip: true,
     desc: "Warm and inviting, the Octatel is our most sociable retreat. Wake to mountain air, gather around the bonfire, and let the highland evenings sing.",
     inclusions: [
       { icon: <Coffee size={14} />, text: "Free Breakfast for 2" },
@@ -377,7 +377,7 @@ const rooms = [
   },
   {
     id: "dojo", name: "Japanese Dojo", sub: "Zen Highland Retreat",
-    badge: "✦ Premium", price: "6,000", image: "public/japanese-dojo.jpg", flip: false,
+    badge: "✦ Premium", price: "6,000", image: "/japanese-dojo.jpg", flip: false,
     desc: "Inspired by the quiet philosophy of Japanese design — shoji screens, clean lines, and a profound connection to the natural world surrounding you.",
     inclusions: [
       { icon: <Sparkles size={14} />, text: "Authentic Zen Architecture"},
@@ -387,7 +387,7 @@ const rooms = [
   },
   {
     id: "villa", name: "Family Villa", sub: "The Crown Residence",
-    badge: "◈ Luxury", price: "12,000", image: "public/resort-5.jpg", flip: true,
+    badge: "◈ Luxury", price: "12,000", image: "/resort-5.jpg", flip: true,
     desc: "Villa Recurso's most exclusive address. Panoramic Mt. Apo views greet every morning from a private jacuzzi, while a full kitchen makes each moment feel like home.",
     inclusions: [
       { icon: <Mountain size={14} />,        text: "Private Mt. Apo Views" },
@@ -500,14 +500,14 @@ function Accommodations() {
 
 /* ────────────────────────── Gallery ────────────────────────────── */
 const gallery = [
-  { src: "public/resort-1.jpg",      label: "I ♥ Recurso",       wide: true  },
-  { src: "public/kawa-bath.jpg",     label: "Kawa Hot Bath",      wide: false },
-  { src: "public/function-hall.jpg", label: "Game Hall",          wide: false },
-  { src: "public/resort-4.jpg",      label: "Landmark Windmill",  wide: false },
-  { src: "public/resort-2.jpg",      label: "Bar Lounge",         wide: false },
-  { src: "public/japanese-dojo.jpg", label: "Japanese Dojo",      wide: true  },
-  { src: "public/videoke.jpg",       label: "Music Room",         wide: false },
-  { src: "public/resort-3.jpg",      label: "Junkyard Resto Bar", wide: false },
+  { src: "/resort-1.jpg",      label: "I ♥ Recurso",       wide: true  },
+  { src: "/kawa-bath.jpg",     label: "Kawa Hot Bath",      wide: false },
+  { src: "/function-hall.jpg", label: "Game Hall",          wide: false },
+  { src: "/resort-4.jpg",      label: "Landmark Windmill",  wide: false },
+  { src: "/resort-2.jpg",      label: "Bar Lounge",         wide: false },
+  { src: "/japanese-dojo.jpg", label: "Japanese Dojo",      wide: true  },
+  { src: "/videoke.jpg",       label: "Music Room",         wide: false },
+  { src: "/resort-3.jpg",      label: "Junkyard Resto Bar", wide: false },
 ];
 
 function GalleryThumb({ item, index }) {
@@ -680,7 +680,7 @@ function FooterBar() {
   return (
     <footer style={{ background: T.text, padding: "22px 40px", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
       <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-        <img src="public/logo.png" alt="Villa Recurso" style={{ height: 26, opacity: 0.55 }} />
+        <img src="/logo.png" alt="Villa Recurso" style={{ height: 26, opacity: 0.55 }} />
         <span style={{ fontFamily: T.sans, fontSize: 11, color: "rgba(255,255,255,0.35)", fontWeight: 400 }}>Villa Recurso</span>
       </div>
       <p style={{ fontFamily: T.sans, fontSize: 11, color: "rgba(255,255,255,0.22)", margin: 0 }}>
